@@ -35,6 +35,9 @@ class Bar {
     
     return sqrt(sq(y-y3)+sq(x-x3))<=10 &&((x>=x2 && x<=x1)||(y>=y2 && y<=y1));
   }
+    boolean click(){
+    return pick(mouseX,mouseY)&&mousePressed;
+  }
 
   void display() {
     pushStyle();

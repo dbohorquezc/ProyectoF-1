@@ -3,7 +3,7 @@ Node start;
 Node fin;
 
 Button newBar;
-Button newArm;
+Button erase;
 Button setAngle;
 Button setLength;
 Button move;
@@ -24,13 +24,13 @@ void setup() {
   Q=false;
   M=false;
 
-  newBar=new Button("xd1.png", new PVector(width*6/88, height*1/11), new PVector(40, 35));
-  newArm=new Button("Papelera1.png", new PVector(width*6/88, height*5/22), new PVector(40, 35));
-  setAngle= new Button("setAngle1.png", new PVector(width*6/88, height*4/11), new PVector(40, 35));
-  setLength= new Button("setLength1.png", new PVector(width*6/88, height*11/22 ), new PVector(40, 35));
-  move=new Button("mano1.png", new PVector(width*6/88, height*7/11), new PVector(40, 35));
-  force= new Button("force1.png",new PVector(width*6/88,height*17/22),new PVector(40,35));
-  moment= new Button("moment1.png",new PVector(width*6/88,height*10/11 ),new PVector(40,35));
+  erase=new Button("Papelera1.png", new PVector(width*6/88, height*1/11), new PVector(40, 35),2);
+  newBar=new Button("xd1.png", new PVector(width*6/88, height*5/22), new PVector(40, 35),1);
+  setAngle= new Button("setAngle1.png", new PVector(width*6/88, height*4/11), new PVector(40, 35),0);
+  setLength= new Button("setLength1.png", new PVector(width*6/88, height*11/22 ), new PVector(40, 35),0);
+  move=new Button("mano1.png", new PVector(width*6/88, height*7/11), new PVector(40, 35),5);
+  force= new Button("force1.png", new PVector(width*6/88, height*17/22), new PVector(40, 35),0);
+  moment= new Button("moment1.png", new PVector(width*6/88, height*10/11 ), new PVector(40, 35),0);
 }
 
 void draw() {
@@ -38,9 +38,6 @@ void draw() {
 }
 
 void mousePressed() {
-  if (mode==0&&newBar.click(mouseX, mouseY)) {
-    mode=1;
-  }
 }
 
 
