@@ -26,7 +26,7 @@ class Button {
     mode=valor;
     }
     if (pick(mouseX, mouseY)) {
-      strokeWeight(10);
+      strokeWeight(8);
       rect(position.x, position.y, size.x, size.y, 8);
     } else {
       strokeWeight(5);      
