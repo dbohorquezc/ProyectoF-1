@@ -502,6 +502,17 @@ case 5:
           barras.remove(i);
         }
       }
+      for (int i=0; i<fuerzas.size(); i++){
+        if(fuerzas.get(i).click()){
+          fuerzas.remove(i);
+        }
+      }
+      for(int i=0 ; i<momentos.size(); i++){
+        if(momentos.get(i).originv.click()){
+          momentos.remove(i);
+        }
+        
+      }
       for (int i=0; i<apoy.size(); i++) {
         if (apoy.get(i).pos.click()) {
           apoy.remove(i);

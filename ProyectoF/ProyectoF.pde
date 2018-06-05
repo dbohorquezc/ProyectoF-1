@@ -6,7 +6,8 @@ Button newBar, erase, setAngle, setLength, move, force, moment, fixed, roller, c
 int mode, z, w, f, d, u,intmover=-1,a;
 float x, y;
 int j=0,k=0;
-
+float sumx = 0;
+float sumy = 0;
 PVector posicion;
 PVector magnitud;
 boolean direccion;
@@ -60,7 +61,7 @@ void mousePressed() {
 
 
 void mouseReleased() {
-  if (mode==1&&P) {
+  if ((mode==1||mode == 4)&&P) {
     Q=true;
   }
   if (algo == true) {
@@ -87,4 +88,23 @@ void mouseWheel(MouseEvent event) {
 
 boolean nose(int i) {
   return barras.get(i).origin().click()||barras.get(i).end().click();
+}
+
+void keyPressed(){
+  
+  if(key == CODED){
+    if(keyCode == UP){
+        sumatoriaY();
+        println("La fuerza en y del sistema es "+sumy+" Newtons");
+        sumatoriaX();
+        println("La fuerza en x del sistema es "+sumx+" Newtons");
+    
+    }
+    
+  }
+
+
+
+
+
 }
